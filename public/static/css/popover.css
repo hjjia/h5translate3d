@@ -1,0 +1,78 @@
+.popover{
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    width: 250px;
+    min-height: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    position: relative;
+    z-index: 9999;
+}
+.popover:before{
+    position: absolute;
+    background: #FFFFFF;
+    content: '';
+}
+.popover:after {
+    content: "";
+    z-index: -1;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    box-shadow: 0px 5px 20px rgba(0,0,0,.5);
+}
+.top.popover:before{
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 22px;
+}
+.top.popover:after {
+    margin-left: -10px;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+}
+.bottom.popover:before{
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 22px;
+}
+.bottom.popover:after {
+    margin-left: -10px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+}
+.left.popover:before{
+    bottom: 20px;
+    top: 20px;
+    left: 0;
+    width: 22px;
+}
+.left.popover:after {
+    margin-top: -10px;
+    left: -8px;
+    top: 50%;
+}
+.right.popover:before{
+    bottom: 20px;
+    top: 20px;
+    right: 0;
+    width: 22px;
+}
+.right.popover:after {
+    margin-top: -10px;
+    right: -8px;
+    top: 50%;
+}
