@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 translate</title>
+    <link href="public/static/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="public/static/css/popover.css" rel="stylesheet" type="text/css">
+    <link href="public/translate/css/translate.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header">
+           <!-- <ul>
+                <li><a></a></li>
+            </ul>-->
+        </nav>
+    </header>
+    <div class="main">
+        <div class="banner">
+            <div class="layer fixed" id="layer0" data-speed="2" ></div>
+            <div class="layer fixed" id="layer1" data-speed="5" ></div>
+            <div class="layer fixed" id="layer2" data-speed="11" ></div>
+            <div class="layer fixed" id="layer3" data-speed="16" ></div>
+            <div class="layer fixed" id="layer4" data-speed="26" ></div>
+            <div class="layer fixed" id="layer5" data-speed="36" ></div>
+            <div class="layer fixed" id="layer6" data-speed="49" ></div>
+            <div class="layer fixed" id="layer7" data-speed="69" ></div>
+            <div class="layer " id="layer8" data-speed="100" ></div>
+        </div>
+        <div class="content" id="content">
+            <div class="content-inner">
+                <ul class="line-list-4">
+                    <li class="item" id="app_coda">
+                        <a class="item-link"></a>
+                        <div class="bottom popover" data-ride="popover">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer>
+    </footer>
+<script src="public/static/js/jquery-1.11.3.min.js"></script>
+<!--<script src="public/static/js/popover.js"></script> -->
+<script>
+    window.addEventListener("scroll", function(event){
+
+        var top = this.pageYOffset;
+
+        var layers = document.getElementsByClassName("fixed");
+        var layer, speed, yPos;
+        for (var i = 0; i < layers.length; i++) {
+            layer = layers[i];
+            speed = layer.getAttribute('data-speed');
+            var yPos = -(top * speed / 100);
+            layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+        }
+    });
+   /* $('.popover').popover({
+        direction:'bottom',
+        content:'hello'
+    })*/
+
+</script>
+</body>
+</html>

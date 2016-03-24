@@ -1,0 +1,119 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.header{
+    width: 100%;
+    height: 34px;
+    background-color: #210002;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+.main{
+    width: 100%;
+    min-height: 1000px;
+    position: relative;
+    background-color: #210002;
+}
+.banner{
+    z-index: 10;
+    position: relative;
+    display: block;
+    height: 1000px;
+
+}
+.banner .layer{
+    background-position: bottom center;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+}
+.banner .layer.fixed{
+    position: fixed;
+}
+
+#layer0{
+    background-image: url('../images/parallax0.png');
+}
+#layer1{
+    background-image: url('../images/parallax1.png');
+}
+#layer2{
+    background-image: url('../images/parallax2.png');
+}
+#layer3{
+    background-image: url('../images/parallax3.png');
+}
+#layer4{
+    background-image: url('../images/parallax4.png');
+}
+#layer5{
+    background-image: url('../images/parallax5.png');
+}
+#layer6{
+    background-image: url('../images/parallax6.png');
+}
+#layer7{
+    background-image: url('../images/parallax7.png');
+}
+#layer8{
+    background-image: url('../images/parallax8.png');
+}
+
+.content{
+    width: 100%;
+    min-height: 1000px;
+    background-color:#210002 ;
+    z-index: 99;
+    position: relative;
+}
+.content .content-inner{
+    width: 1000px;
+    margin: 0 auto;
+}
+.line-list-4{
+    padding: 20px 0;
+    box-sizing: border-box;
+    margin: 0;
+    color: #ffaf00;
+}
+.line-list-4:after{
+    display: table;
+    content: ' ';
+    clear: both;
+}
+.line-list-4 .item{
+    display: inline-block;
+    position: relative;
+}
+.line-list-4 .item-link{
+    width: 234px;
+    height: 234px;
+    color: transparent;
+    text-indent: -9999px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 42px;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.line-list-4 .item-link:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.line-list-4 .item#app_coda>a {
+    background-image: url(../images/icon-coda25.png);
+    -webkit-background-size: 197px 192px;
+    background-size: 197px 192px;
+}
+.line-list-4 .item:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
