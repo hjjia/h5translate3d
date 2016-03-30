@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.border{
+    border: 1px solid yellow;
+}
+.content{
+    width: 60%;
+    margin: 100px auto 0;
+    text-align: center;
+    padding: 50px;
+}
+.ball-box{
+    text-align: center;
+}
+.ball-box .ball{
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #F0F;
+    position: relative;
+    display: inline-block;
+}
+.ball-box .ball .running-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    display: block;
+    animation: Rotate 6s  infinite
+}
+.ball-box .ball .running-ball{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    left: 45%;
+    top: -5%;
+    border-radius: 100%;
+    background-color: #F0F;
+    display: block;
+    content: '';
+}
+.ball-box .ball:after{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
+    background-color: #F0F;
+    display: block;
+    content: '';
+}
+
+.ball-box .ball.color1{
+    border-color: #0CF;
+}
+.ball-box .ball.color1:after,
+.ball-box .ball.color1 .running-ball
+{
+    background-color: #0CF;
+}
+
+.ball-box .ball.color2{
+    border-color: #06F;
+}
+.ball-box .ball.color2:after,
+.ball-box .ball.color2 .running-ball
+{
+    background-color: #06F;
+}
+.ball-box .ball.color3{
+    border-color: #0C3;
+}
+.ball-box .ball.color3:after,
+.ball-box .ball.color3 .running-ball
+{
+    background-color: #0C3;
+}
+.ball-box .ball.color4{
+    border-color: #F60;
+}
+.ball-box .ball.color4:after,
+.ball-box .ball.color4 .running-ball
+{
+    background-color: #F60;
+}
+.ball-box .ball.color5{
+    border-color: #900;
+}
+.ball-box .ball.color5:after,
+.ball-box .ball.color5 .running-ball
+{
+    background-color: #900;
+}
+.ball-box .ball.color6{
+    border-color: #CC3;
+}
+.ball-box .ball.color6:after,
+.ball-box .ball.color6 .running-ball
+{
+    background-color: #CC3;
+}
+@keyframes Rotate {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.copyright{
+    margin-top: 40px;
+    color: #545454;
+    text-align: center;
+}
+.copyright .link{
+    color: #337ab7;
+    text-decoration: none;
+}
+.copyright .link:hover{
+    color: #23527c;
+}
