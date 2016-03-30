@@ -1,0 +1,94 @@
+/*
+.box{padding-top:100px;}
+.box .taiji{margin:0 auto;}
+/!*只有最外面容器使用了宽高px设置，	内部均为百分比设置，只需改变容器大小，太极图就可以自动缩放*!/
+.taiji{position: relative; width: 300px; height: 300px; border-radius: 50%; background-color: #fff;border:solid 1px #ccc;    animation: spin 6s linear infinite;/!*动画设置*!/}
+.tj_1{position: absolute; top: 0px; width: 50%; height: 100%;}
+.tj_big1{left: 0px; border-radius:100% 0 0 100% /50% 0 0 50%; background: #000;}
+.tj_big2{right: 0px; border-radius:0 100% 100% 0 / 0 50% 50% 0; background: #fff;}
+.tj_2{position: absolute; width: 50%; height: 50%; left: 25%; border-radius: 50%;}
+.tj_s1{bottom: 0px; background: #fff;}
+.tj_s2{top: 0px; background: #000;}
+.tj_ss{position: absolute; width: 25%; height: 25%; left: 37.5%;border-radius: 50%;}
+.tj_w{top:37.5%;background: #000;}
+.tj_b{top:37.5%;background: #fff;}
+/!*动画方法*!/
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}*/
+.box{
+    padding-top: 100px;
+}
+.content{
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #aaa;
+    animation: Rotate 6s linear infinite;
+}
+.left{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left:0;
+    height: 100%;
+    background-color: #000000;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+.right{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+}
+.inner-circle{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    border-radius:50% ;
+}
+.up{
+    top: 0;
+    background-color: #000000;
+}
+.down{
+    bottom: 0;
+    background-color: #FFFFFF;
+}
+.sm-circle{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    top: 37.5%;
+    left: 37.5%;
+    border-radius: 50%;
+}
+.circle-white{
+    background-color: #FFFFFF;
+}
+.circle-black{
+    background-color: #000;
+}
+
+@keyframes Rotate {
+    0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
